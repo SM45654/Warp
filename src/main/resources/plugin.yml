@@ -1,0 +1,35 @@
+name: Warp
+version: 2.6.2-SNAPSHOT
+author: SM45654
+main: at.sm45654.warp.Warp
+api-version: '1.20'
+
+commands:
+  setwarp:
+  deletewarp:
+    aliases:
+      - delwarp
+  warp:
+    aliases:
+      - w
+  listwarp:
+    aliases:
+      - warplist
+  warpgui:
+    aliases:
+      - warps
+
+permissions:
+  warp.setwarp:
+    default: op
+  warp.deletewarp:
+    default: op
+  warp.sign:
+    default: op
+  warp.admin:
+    default: op
+    children:
+      - warp.setwarp
+      - warp.deletewarp
+      - warp.sign
+
